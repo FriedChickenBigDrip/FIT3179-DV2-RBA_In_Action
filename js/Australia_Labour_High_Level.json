@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 400,
+  "title": "RBA Labour Force Statistics (1998 to 2024)",
+
+
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 1998,
+        "max": 2025,
+        "step": 1,
+        "name": "Year:  "
+      }
+    },
+    {
+      "name": "Month_selection",
+      "value": 8,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "name": "Month:  "
+      }
+    },
+    {
+      "name": "RBA_Labour_Rate_Name",
+      "bind": {
+          "input": "select",
+          "options": [
+          null,
+          "Unemployment Rate",
+          "Labour Force Participation Rate"
+          ],
+          "labels": [
+          "Show All",
+          "Unemployment Rate",
+          "Labour Force Participation Rate"
+          ],
+          "name": "RBA Labour Rate Name: "
+      }
+    },
+    {
+      "name": "Gender_selection",
+      "bind": {
+          "input": "select",
+          "options": [
+          null,
+          "Males",
+          "Females"
+          ],
+          "labels": [
+          "Show All",
+          "Males",
+          "Females"
+          ],
+          "name": "Sex: "
+      }
+    },
+    {
+      "name": "Age_selection",
+      "bind": {
+          "input": "select",
+          "options": [
+          null,
+          "15-24 years",
+          "25-34 years",
+          "35-44 years",
+          "45-54 years",
+          "55-64 years",
+          "65 years and over"
+          ],
+          "labels": [
+          "Show All",
+          "15-24 years",
+          "25-34 years",
+          "35-44 years",
+          "45-54 years",
+          "55-64 years",
+          "65 years and over"
+          ],
+          "name": "Age Group: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equirectangular",
+    "center": [133.7751, -25.2744],
+    "scale": 600
+  },
+  "layer": [
+
+    {
+      "data": {
+        "url": "js/SA4_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+      },
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.SA4_NAME21",
+          "as": "note"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {"tooltip": {"field": "note"}}
+    },
+    
+    {
+      "data": {
+        "url": "js/SA4_2021_AUST_GDA2020.json",
+        "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "skyblue"}
+    },
+    {
+      "data": {
+        "url": "data/Australia_High_Level_Labour.csv"
+      },
+      "transform": [
+        {
+          "lookup": "Labour market region (SA4): ASGS (2011)",
+          "from": {
+            "data": {
+              "url": "js/SA4_2021_AUST_GDA2020.json",
+              "format": {
+                "type": "topojson",
+                "feature": "SA4_2021_AUST_GDA2020"
+              }
+            },
+            "key": "properties.SA4_NAME21"
+          },
+          "as": "geo"
+        },
+        {"filter": "datum.Month == Month_selection"},
+        {"filter": "datum.Year == Year_selection"},	
+        {"filter": "Gender_selection == null || datum.Sex == Gender_selection"},
+        {"filter": "Age_selection == null || datum.Age == Age_selection"},
+        {"filter": "RBA_Labour_Rate_Name == null || datum.RBA_Labour_Rate_Type == RBA_Labour_Rate_Name"}
+      ],
+      "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "RBA_Labour_Rate_Value",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "reds"
+          },
+          "title": "RBA Labour Rate Value",
+          "format": ".2f"
+        },
+        "tooltip": [
+          {"field": "Labour market region (SA4): ASGS (2011)", "type": "nominal", "title": "Region"},
+          {"field": "Date", "type": "nominal", "title": "Observed Period"},
+          {"field": "RBA_Labour_Rate_Value", "type": "quantitative", "title": "RBA Labour Rate Value", "format": ".2f"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

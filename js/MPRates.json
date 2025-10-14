@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 400,
+    "description": "Monetary Policy Rates over Time.",
+
+  
+    "data": {"url": "data/MonetaryPolicyRates.csv"},
+    "mark": {
+        "type": "line",
+        "point": true
+    },
+    "encoding": {
+        "x": {"timeUnit": "yearmonth", "field": "Date"},
+        "y": {"field": "Value", "type": "quantitative","scale": {"domain": [0, 9]} },
+        "color": {"field": "Attribute", "type": "nominal"}
+    }
+}
