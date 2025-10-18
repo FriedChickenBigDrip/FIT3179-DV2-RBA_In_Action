@@ -16,7 +16,7 @@
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Oranienbaum&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Open+Sans:wght@300;400;600;700&family=Oranienbaum&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
@@ -30,11 +30,8 @@
     <!-- pure grid group // Heading and Introduction -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-
         <h1>The Reserve Bank of Australia in Action</h1>
-        <p>The Reserve Bank of Australia sets policy with a single question in mind: how do we keep inflation low and stable while supporting full employment and the prosperity of Australians? This chart turns that judgement call into its core building blocks. The labour market shows capacity jobs, hours, and wages. Inflation tracks price pressures against the 2-3% target. Economic growth captures momentum in output and demand. Overseas factors; global rates, trade, commodity prices, and financial conditions—wash onto our shores and shape local conditions. And, at times, extraordinary shocks like COVID or natural disasters overwhelm the usual signals.</p>
-
-        <p>Viewed together, these components form the RBA's dashboard. As one dial moves, the others matter more or less. Use the visual to see how shifts in each area can tilt the policy calculus, and why the same data can lead to different decisions at different moments.</p>
+        <p>Australia's economic rhythm is quietly shaped by the Reserve Bank of Australia (RBA). Through monetary policy, the Bank sets the tone for interest rates, manages liquidity, and steers inflation toward stability. Each adjustment to the cash rate or shift in its balance sheet reflects a broader balancing act - keeping prices steady, supporting jobs, and navigating the ripple effects of global markets. This visualization explores how those levers work in practice and the forces that guide them.</p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -43,13 +40,24 @@
     <div class="pure-g">
       <div class="pure-u-5-5">
         <h2>Monetary Policy: Interest Rate Corridor</h2>
-        <p>Monetary policy, at its core, is the RBA setting the price of overnight money and letting that price ripple through the rest of the economy. It does this with an interest-rate corridor: the cash rate target sits in the middle—the price banks aim to trade Exchange Settlement (ES) balances at—bounded below by the interest on ES balances (a floor: no bank will lend cheaper than what it can earn risk-free at the RBA) and above by the rate the RBA charges when it lends overnight against collateral via repo (often shown as the reverse-repo/standing facility rate—the ceiling). These guardrails keep actual overnight trades hugging the middle line on your chart. When the RBA wants to tighten or ease, it shifts the whole corridor up or down by moving the cash rate target (with the floor and ceiling moving in step). That single price change transmits to bank funding costs, loan and deposit rates, spending and investment—ultimately steering inflation and employment.</p>
         <div id="vis1" class="vis-container"></div>
-        <p>The corridor is the band you see above—cash rate target in the middle, ES balance rate as the floor, and the RBA’s standing facility/reverse-repo rate as the ceiling. It looks especially narrow during the 2008 GFC and the 2020 COVID lockdown because the RBA flooded the system with ES balances to keep markets calm, which pulled the traded cash rate down toward the floor; in 2020 the floor was set near zero as well, compressing the band itself.</p>
+        <p>The interest rate corridor is the RBA's main framework for guiding short-term interest rates. 
+          At its centre sits the <span class="highlight-Cash-Rate">cash rate target</span> - the rate the RBA wants banks to lend to each other overnight. 
+          The <span class="highlight-Exchange-Settlement-Rate">exchange settlement rate</span> forms the floor of the corridor, as it's the rate the RBA pays on funds that banks hold in their accounts at the central bank. 
+          The <span class="highlight-Overnight-Repo-Rate">overnight repo rate</span> sets the ceiling, as it's the rate banks pay to borrow cash from the RBA using securities as collateral. 
+          By keeping market rates trading within this narrow band, the RBA ensures that the cost of money in the economy stays close to its policy target.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <div class="pure-g">
+      <div class="pure-u-5-5">
         <h2>Monetary Policy: Banknotes in Circulation</h2>
-        <p>The RBA prints banknotes to keep the economy moving. It controls the amount of banknotes in circulation with an auction system that banks bid for. The bids are matched to the supply, and the winning bids determine the amount of banknotes in circulation. The RBA uses this system to control the money supply and influence economic activity.</p>
         <div id="vis2" class="vis-container"></div>
-        <p>The banknotes in circulation are the banknotes that are in circulation in the economy. The RBA prints banknotes to keep the economy moving. The RBA uses this system to control the money supply and influence economic activity.</p>
+        <p>The total value of banknotes in circulation shows how much physical cash Australians are holding at any point in time. 
+          When people or businesses need more cash-like during periods of strong spending or uncertainty - the RBA increases supply through the banking system. 
+          Although most transactions are now digital, the amount of cash in circulation has risen steadily over time, driven by population growth, higher prices, 
+          and the continued demand to hold cash as a secure store of value.</p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -59,18 +67,14 @@
       <div class="pure-u-5-5">
 
           <h2>The Influence of Unemployment</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
           <div id="vis3" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
+          <p>Unemployment is one of the key signals the RBA watches when setting monetary policy. 
+            High joblessness means spare capacity in the economy - people want to work, 
+            but demand is too weak - so the RBA tends to lower interest rates to encourage spending and hiring. 
+            When unemployment falls and labour markets tighten, wage and price pressures rise, prompting the Bank to raise rates to keep inflation in check. 
+            Mapping unemployment across regions, age groups, and genders reveals where the economy's strengths and stresses lie - insights that 
+            help shape how the RBA's policy supports a more balanced recovery.</p>
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div id="vis2" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -79,10 +83,9 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <div class="description">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <h2>The Influence of Inflation</h2>
+          <p>The inflation rate is the rate at which the price of goods and services is increasing. The inflation rate is measured by the Consumer Price Index (CPI). The CPI is a measure of the price of a basket of goods and services that are representative of the typical Australian household. The inflation rate is measured by the Consumer Price Index (CPI). The CPI is a measure of the price of a basket of goods and services that are representative of the typical Australian household.</p>
+            <div id="vis4" class="vis-container"></div>
         </div>
       </div>
     </div>
@@ -109,16 +112,21 @@
     var specVis1 = "js/MPRates.json";
     var specVis2 = "js/BankNotes.json";
     var specVis3 = "js/Australia_Labour_High_Level.json";
+    var specVis4 = "js/HeatMapCPI.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
     vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
+
     vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
+    vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
 
   </script>
 </body>

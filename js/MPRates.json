@@ -3,16 +3,68 @@
     "width": "container",
     "height": 400,
     "description": "Monetary Policy Rates over Time.",
+    
 
-  
+
     "data": {"url": "data/MonetaryPolicyRates.csv"},
+    "transform": [
+    {
+        "calculate": "datum.Attribute == 'Cash_Rate_Target' ? 'Cash Rate Target' : datum.Attribute == 'Exchange_Settlement_Rate' ? 'Exchange Settlement Rate' : 'Overnight Repo Rate'",
+        "as": "Attribute_Clean"
+    }
+],
+"layer": [
+    {
     "mark": {
         "type": "line",
         "point": true
     },
     "encoding": {
-        "x": {"timeUnit": "yearmonth", "field": "Date"},
-        "y": {"field": "Value", "type": "quantitative","scale": {"domain": [0, 9]} },
-        "color": {"field": "Attribute", "type": "nominal"}
+        "x": {"field": "Date", "type": "temporal", "title": "Quarterly Observations"},
+        "y": {"field": "Value", "type": "quantitative","scale": {"domain": [0, 9]}, "title": "Monetary Policy Rate (%)"},
+        "color": {"field": "Attribute_Clean", "type": "nominal", "title": "Monetary Policy Rate Type", 
+            "scale": {
+                "domain": ["Cash Rate Target", "Exchange Settlement Rate", "Overnight Repo Rate"],
+                "range": ["#e74c3c", "#3498db", "#2ecc71"]
+            }	
+    },
+        "tooltip": [	
+            {"field": "Date", "type": "temporal", "title": "Quarterly Observations"},
+            {"field": "Value", "type": "quantitative", "title": "Monetary Policy Rate (%)"},
+            {"field": "Attribute_Clean", "type": "nominal", "title": "Monetary Policy Rate Type"}
+        ]
     }
+},
+{
+    "data": {
+        "values": [
+            {"event": "2008/09/01", "label": "GFC Crisis"},
+            {"event": "2021/02/01", "label": "Post COVID-19 Inflation"}
+        ]
+    },
+    "layer": [
+        {
+            "mark": {"type": "rule", "strokeDash": [4, 4], "color": "gray"},
+            "encoding": {
+                "x": {"field": "event", "type": "temporal"}
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 5,
+                "dy": -180,
+                "fontSize": 11,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "x": {"field": "event", "type": "temporal"},
+                "text": {"field": "label", "type": "nominal"}
+            }
+        }
+    ]
+}
+]
+
 }

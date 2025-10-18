@@ -1,0 +1,529 @@
+Series_ID,Attribute,Value
+2014/03/01,Bread,2
+2014/03/01,Beef and Veal,-0.3
+2014/03/01,Milk,-0.4
+2014/03/01,Cheese,1.9
+2014/03/01,Ice Cream and Other Dairy,1
+2014/03/01,Eggs,4.5
+2014/03/01,Take Away and Meals Out,2.2
+2014/03/01,Alcohol and Tabacco,7
+2014/03/01,Rent,1.9
+2014/03/01,Electricity,2.5
+2014/03/01,Pharamacy,1.4
+2014/03/01,Dental,1.5
+2014/06/01,Bread,1.3
+2014/06/01,Beef and Veal,1.9
+2014/06/01,Milk,0.6
+2014/06/01,Cheese,8.7
+2014/06/01,Ice Cream and Other Dairy,1.4
+2014/06/01,Eggs,6.7
+2014/06/01,Take Away and Meals Out,2.3
+2014/06/01,Alcohol and Tabacco,7.3
+2014/06/01,Rent,1.7
+2014/06/01,Electricity,2.5
+2014/06/01,Pharamacy,1.6
+2014/06/01,Dental,1.1
+2014/09/01,Bread,-1.2
+2014/09/01,Beef and Veal,5.1
+2014/09/01,Milk,-1
+2014/09/01,Cheese,7.4
+2014/09/01,Ice Cream and Other Dairy,0.4
+2014/09/01,Eggs,8.7
+2014/09/01,Take Away and Meals Out,2.5
+2014/09/01,Alcohol and Tabacco,7.4
+2014/09/01,Rent,1.9
+2014/09/01,Electricity,-6.2
+2014/09/01,Pharamacy,0.9
+2014/09/01,Dental,2.5
+2014/12/01,Bread,-3.4
+2014/12/01,Beef and Veal,4.6
+2014/12/01,Milk,-1.6
+2014/12/01,Cheese,7.1
+2014/12/01,Ice Cream and Other Dairy,-1.8
+2014/12/01,Eggs,2.9
+2014/12/01,Take Away and Meals Out,3.1
+2014/12/01,Alcohol and Tabacco,7.7
+2014/12/01,Rent,2.4
+2014/12/01,Electricity,-6.2
+2014/12/01,Pharamacy,-0.9
+2014/12/01,Dental,2.6
+2015/03/01,Bread,-6.4
+2015/03/01,Beef and Veal,4.8
+2015/03/01,Milk,0.1
+2015/03/01,Cheese,6.9
+2015/03/01,Ice Cream and Other Dairy,0.9
+2015/03/01,Eggs,0
+2015/03/01,Take Away and Meals Out,3.1
+2015/03/01,Alcohol and Tabacco,5.6
+2015/03/01,Rent,2.5
+2015/03/01,Electricity,-4.7
+2015/03/01,Pharamacy,-0.7
+2015/03/01,Dental,3.3
+2015/06/01,Bread,-9.1
+2015/06/01,Beef and Veal,6.1
+2015/06/01,Milk,-1.4
+2015/06/01,Cheese,2.6
+2015/06/01,Ice Cream and Other Dairy,-0.7
+2015/06/01,Eggs,-0.7
+2015/06/01,Take Away and Meals Out,3.2
+2015/06/01,Alcohol and Tabacco,4.8
+2015/06/01,Rent,2.6
+2015/06/01,Electricity,-3.6
+2015/06/01,Pharamacy,-0.7
+2015/06/01,Dental,2.5
+2015/09/01,Bread,-8
+2015/09/01,Beef and Veal,8.9
+2015/09/01,Milk,-0.7
+2015/09/01,Cheese,-2.3
+2015/09/01,Ice Cream and Other Dairy,0.4
+2015/09/01,Eggs,-1.6
+2015/09/01,Take Away and Meals Out,2.7
+2015/09/01,Alcohol and Tabacco,4.8
+2015/09/01,Rent,2.2
+2015/09/01,Electricity,5.4
+2015/09/01,Pharamacy,1.6
+2015/09/01,Dental,0.8
+2015/12/01,Bread,-6.5
+2015/12/01,Beef and Veal,10.9
+2015/12/01,Milk,-1.3
+2015/12/01,Cheese,-1.7
+2015/12/01,Ice Cream and Other Dairy,-1.3
+2015/12/01,Eggs,-1.5
+2015/12/01,Take Away and Meals Out,2
+2015/12/01,Alcohol and Tabacco,5.8
+2015/12/01,Rent,1.7
+2015/12/01,Electricity,5.4
+2015/12/01,Pharamacy,3
+2015/12/01,Dental,0.9
+2016/03/01,Bread,-2.2
+2016/03/01,Beef and Veal,15
+2016/03/01,Milk,-2.3
+2016/03/01,Cheese,-4.4
+2016/03/01,Ice Cream and Other Dairy,-3
+2016/03/01,Eggs,1.2
+2016/03/01,Take Away and Meals Out,1.7
+2016/03/01,Alcohol and Tabacco,5.9
+2016/03/01,Rent,1.4
+2016/03/01,Electricity,-0.8
+2016/03/01,Pharamacy,1.4
+2016/03/01,Dental,1.4
+2016/06/01,Bread,0.3
+2016/06/01,Beef and Veal,11.5
+2016/06/01,Milk,-1.6
+2016/06/01,Cheese,-2.2
+2016/06/01,Ice Cream and Other Dairy,-0.7
+2016/06/01,Eggs,0.3
+2016/06/01,Take Away and Meals Out,1.4
+2016/06/01,Alcohol and Tabacco,4.9
+2016/06/01,Rent,1.4
+2016/06/01,Electricity,-1.9
+2016/06/01,Pharamacy,1.3
+2016/06/01,Dental,2.1
+2016/09/01,Bread,1.2
+2016/09/01,Beef and Veal,8.9
+2016/09/01,Milk,-0.5
+2016/09/01,Cheese,-2.1
+2016/09/01,Ice Cream and Other Dairy,-3
+2016/09/01,Eggs,-0.3
+2016/09/01,Take Away and Meals Out,1.1
+2016/09/01,Alcohol and Tabacco,5.5
+2016/09/01,Rent,1.4
+2016/09/01,Electricity,-1.9
+2016/09/01,Pharamacy,0.3
+2016/09/01,Dental,1.7
+2016/12/01,Bread,-0.4
+2016/12/01,Beef and Veal,6
+2016/12/01,Milk,0.1
+2016/12/01,Cheese,-3.6
+2016/12/01,Ice Cream and Other Dairy,-0.5
+2016/12/01,Eggs,0.3
+2016/12/01,Take Away and Meals Out,1.2
+2016/12/01,Alcohol and Tabacco,5.8
+2016/12/01,Rent,1.6
+2016/12/01,Electricity,-1.9
+2016/12/01,Pharamacy,-0.5
+2016/12/01,Dental,1.7
+2017/03/01,Bread,-0.3
+2017/03/01,Beef and Veal,0.4
+2017/03/01,Milk,0.2
+2017/03/01,Cheese,-2.5
+2017/03/01,Ice Cream and Other Dairy,-0.8
+2017/03/01,Eggs,0.7
+2017/03/01,Take Away and Meals Out,1.4
+2017/03/01,Alcohol and Tabacco,6.5
+2017/03/01,Rent,1.7
+2017/03/01,Electricity,7.7
+2017/03/01,Pharamacy,-0.3
+2017/03/01,Dental,0.6
+2017/06/01,Bread,-1.2
+2017/06/01,Beef and Veal,-0.1
+2017/06/01,Milk,0.6
+2017/06/01,Cheese,-4.2
+2017/06/01,Ice Cream and Other Dairy,-2.2
+2017/06/01,Eggs,-1.3
+2017/06/01,Take Away and Meals Out,1.7
+2017/06/01,Alcohol and Tabacco,7
+2017/06/01,Rent,1.7
+2017/06/01,Electricity,8.2
+2017/06/01,Pharamacy,0.6
+2017/06/01,Dental,1.4
+2017/09/01,Bread,-1
+2017/09/01,Beef and Veal,-0.2
+2017/09/01,Milk,0.2
+2017/09/01,Cheese,-2.7
+2017/09/01,Ice Cream and Other Dairy,-1.9
+2017/09/01,Eggs,-4.5
+2017/09/01,Take Away and Meals Out,2.2
+2017/09/01,Alcohol and Tabacco,8.1
+2017/09/01,Rent,1.8
+2017/09/01,Electricity,8.6
+2017/09/01,Pharamacy,0.1
+2017/09/01,Dental,1.7
+2017/12/01,Bread,0.5
+2017/12/01,Beef and Veal,-0.5
+2017/12/01,Milk,1
+2017/12/01,Cheese,-0.7
+2017/12/01,Ice Cream and Other Dairy,-0.8
+2017/12/01,Eggs,-3.7
+2017/12/01,Take Away and Meals Out,1.9
+2017/12/01,Alcohol and Tabacco,8
+2017/12/01,Rent,1.8
+2017/12/01,Electricity,11.1
+2017/12/01,Pharamacy,1
+2017/12/01,Dental,1.8
+2018/03/01,Bread,0.9
+2018/03/01,Beef and Veal,1.4
+2018/03/01,Milk,0.2
+2018/03/01,Cheese,0.5
+2018/03/01,Ice Cream and Other Dairy,-0.7
+2018/03/01,Eggs,-4.7
+2018/03/01,Take Away and Meals Out,2.5
+2018/03/01,Alcohol and Tabacco,6.7
+2018/03/01,Rent,2.2
+2018/03/01,Electricity,16.7
+2018/03/01,Pharamacy,1.7
+2018/03/01,Dental,2
+2018/06/01,Bread,0.9
+2018/06/01,Beef and Veal,0
+2018/06/01,Milk,1
+2018/06/01,Cheese,2.5
+2018/06/01,Ice Cream and Other Dairy,-0.9
+2018/06/01,Eggs,-3.8
+2018/06/01,Take Away and Meals Out,3.1
+2018/06/01,Alcohol and Tabacco,7.8
+2018/06/01,Rent,1.9
+2018/06/01,Electricity,12.1
+2018/06/01,Pharamacy,2.1
+2018/06/01,Dental,1
+2018/09/01,Bread,2.6
+2018/09/01,Beef and Veal,0.3
+2018/09/01,Milk,0.2
+2018/09/01,Cheese,1.5
+2018/09/01,Ice Cream and Other Dairy,0.4
+2018/09/01,Eggs,-1.2
+2018/09/01,Take Away and Meals Out,2.8
+2018/09/01,Alcohol and Tabacco,6.5
+2018/09/01,Rent,1.8
+2018/09/01,Electricity,11
+2018/09/01,Pharamacy,1.3
+2018/09/01,Dental,1.8
+2018/12/01,Bread,2.1
+2018/12/01,Beef and Veal,2.2
+2018/12/01,Milk,1.6
+2018/12/01,Cheese,0.9
+2018/12/01,Ice Cream and Other Dairy,0.7
+2018/12/01,Eggs,0
+2018/12/01,Take Away and Meals Out,3
+2018/12/01,Alcohol and Tabacco,6.7
+2018/12/01,Rent,1.8
+2018/12/01,Electricity,9
+2018/12/01,Pharamacy,1
+2018/12/01,Dental,2.9
+2019/03/01,Bread,4.2
+2019/03/01,Beef and Veal,4.1
+2019/03/01,Milk,1.1
+2019/03/01,Cheese,1.1
+2019/03/01,Ice Cream and Other Dairy,1.1
+2019/03/01,Eggs,0.1
+2019/03/01,Take Away and Meals Out,2.7
+2019/03/01,Alcohol and Tabacco,6.6
+2019/03/01,Rent,1.6
+2019/03/01,Electricity,-3.7
+2019/03/01,Pharamacy,0.1
+2019/03/01,Dental,3
+2019/06/01,Bread,5.3
+2019/06/01,Beef and Veal,6.3
+2019/06/01,Milk,2.6
+2019/06/01,Cheese,0.8
+2019/06/01,Ice Cream and Other Dairy,1.6
+2019/06/01,Eggs,0.6
+2019/06/01,Take Away and Meals Out,1.4
+2019/06/01,Alcohol and Tabacco,5.8
+2019/06/01,Rent,1.7
+2019/06/01,Electricity,-2
+2019/06/01,Pharamacy,0.4
+2019/06/01,Dental,2.9
+2019/09/01,Bread,4.2
+2019/09/01,Beef and Veal,6.9
+2019/09/01,Milk,6.4
+2019/09/01,Cheese,3.3
+2019/09/01,Ice Cream and Other Dairy,3
+2019/09/01,Eggs,3.9
+2019/09/01,Take Away and Meals Out,1.7
+2019/09/01,Alcohol and Tabacco,6.5
+2019/09/01,Rent,1.7
+2019/09/01,Electricity,-5.3
+2019/09/01,Pharamacy,1.6
+2019/09/01,Dental,3.5
+2019/12/01,Bread,3.6
+2019/12/01,Beef and Veal,8.7
+2019/12/01,Milk,6.2
+2019/12/01,Cheese,5.4
+2019/12/01,Ice Cream and Other Dairy,2.4
+2019/12/01,Eggs,4.5
+2019/12/01,Take Away and Meals Out,2.3
+2019/12/01,Alcohol and Tabacco,6.5
+2019/12/01,Rent,1.7
+2019/12/01,Electricity,-6.2
+2019/12/01,Pharamacy,3.1
+2019/12/01,Dental,3
+2020/03/01,Bread,2.5
+2020/03/01,Beef and Veal,8.9
+2020/03/01,Milk,8
+2020/03/01,Cheese,6.7
+2020/03/01,Ice Cream and Other Dairy,2.7
+2020/03/01,Eggs,5.2
+2020/03/01,Take Away and Meals Out,3.3
+2020/03/01,Alcohol and Tabacco,7.8
+2020/03/01,Rent,1.5
+2020/03/01,Electricity,0
+2020/03/01,Pharamacy,3.1
+2020/03/01,Dental,2.8
+2020/06/01,Bread,1.2
+2020/06/01,Beef and Veal,6.6
+2020/06/01,Milk,6.4
+2020/06/01,Cheese,7.5
+2020/06/01,Ice Cream and Other Dairy,2.7
+2020/06/01,Eggs,6.4
+2020/06/01,Take Away and Meals Out,3.9
+2020/06/01,Alcohol and Tabacco,8.2
+2020/06/01,Rent,0.1
+2020/06/01,Electricity,1.1
+2020/06/01,Pharamacy,2.9
+2020/06/01,Dental,2.8
+2020/09/01,Bread,0.4
+2020/09/01,Beef and Veal,7.7
+2020/09/01,Milk,3
+2020/09/01,Cheese,5
+2020/09/01,Ice Cream and Other Dairy,1.5
+2020/09/01,Eggs,3.7
+2020/09/01,Take Away and Meals Out,1.2
+2020/09/01,Alcohol and Tabacco,8.3
+2020/09/01,Rent,-0.7
+2020/09/01,Electricity,4.6
+2020/09/01,Pharamacy,0.8
+2020/09/01,Dental,1.5
+2020/12/01,Bread,1.2
+2020/12/01,Beef and Veal,7.7
+2020/12/01,Milk,1.6
+2020/12/01,Cheese,2
+2020/12/01,Ice Cream and Other Dairy,1.3
+2020/12/01,Eggs,1.7
+2020/12/01,Take Away and Meals Out,2
+2020/12/01,Alcohol and Tabacco,8.9
+2020/12/01,Rent,-1
+2020/12/01,Electricity,4.9
+2020/12/01,Pharamacy,-1.3
+2020/12/01,Dental,0.8
+2021/03/01,Bread,0.2
+2021/03/01,Beef and Veal,8.2
+2021/03/01,Milk,0.7
+2021/03/01,Cheese,-0.1
+2021/03/01,Ice Cream and Other Dairy,-0.4
+2021/03/01,Eggs,0.9
+2021/03/01,Take Away and Meals Out,1.2
+2021/03/01,Alcohol and Tabacco,8.1
+2021/03/01,Rent,-1.4
+2021/03/01,Electricity,-10.1
+2021/03/01,Pharamacy,-0.4
+2021/03/01,Dental,1.6
+2021/06/01,Bread,0.4
+2021/06/01,Beef and Veal,14.2
+2021/06/01,Milk,0
+2021/06/01,Cheese,-1.1
+2021/06/01,Ice Cream and Other Dairy,-0.7
+2021/06/01,Eggs,-1.6
+2021/06/01,Take Away and Meals Out,1.2
+2021/06/01,Alcohol and Tabacco,7
+2021/06/01,Rent,-0.8
+2021/06/01,Electricity,-12
+2021/06/01,Pharamacy,-1.1
+2021/06/01,Dental,1.6
+2021/09/01,Bread,0.9
+2021/09/01,Beef and Veal,10.6
+2021/09/01,Milk,0.4
+2021/09/01,Cheese,-0.7
+2021/09/01,Ice Cream and Other Dairy,-0.3
+2021/09/01,Eggs,-0.4
+2021/09/01,Take Away and Meals Out,4.5
+2021/09/01,Alcohol and Tabacco,4.5
+2021/09/01,Rent,-0.7
+2021/09/01,Electricity,-11.2
+2021/09/01,Pharamacy,-0.4
+2021/09/01,Dental,1.5
+2021/12/01,Bread,0.7
+2021/12/01,Beef and Veal,7.1
+2021/12/01,Milk,1.4
+2021/12/01,Cheese,1.7
+2021/12/01,Ice Cream and Other Dairy,2.1
+2021/12/01,Eggs,0
+2021/12/01,Take Away and Meals Out,3
+2021/12/01,Alcohol and Tabacco,1.6
+2021/12/01,Rent,-1.1
+2021/12/01,Electricity,-9.3
+2021/12/01,Pharamacy,2
+2021/12/01,Dental,1.4
+2022/03/01,Bread,2.7
+2022/03/01,Beef and Veal,11.2
+2022/03/01,Milk,4.3
+2022/03/01,Cheese,2.9
+2022/03/01,Ice Cream and Other Dairy,4.2
+2022/03/01,Eggs,1.2
+2022/03/01,Take Away and Meals Out,3.7
+2022/03/01,Alcohol and Tabacco,1.6
+2022/03/01,Rent,-0.9
+2022/03/01,Electricity,-3.3
+2022/03/01,Pharamacy,1.2
+2022/03/01,Dental,1.5
+2022/06/01,Bread,7.3
+2022/06/01,Beef and Veal,8.5
+2022/06/01,Milk,5
+2022/06/01,Cheese,4.7
+2022/06/01,Ice Cream and Other Dairy,5.7
+2022/06/01,Eggs,5.5
+2022/06/01,Take Away and Meals Out,4.4
+2022/06/01,Alcohol and Tabacco,2.2
+2022/06/01,Rent,-0.2
+2022/06/01,Electricity,-0.6
+2022/06/01,Pharamacy,1.6
+2022/06/01,Dental,3
+2022/09/01,Bread,10.5
+2022/09/01,Beef and Veal,8.8
+2022/09/01,Milk,16.1
+2022/09/01,Cheese,9.4
+2022/09/01,Ice Cream and Other Dairy,9.3
+2022/09/01,Eggs,10
+2022/09/01,Take Away and Meals Out,6.5
+2022/09/01,Alcohol and Tabacco,3.6
+2022/09/01,Rent,1.2
+2022/09/01,Electricity,8.1
+2022/09/01,Pharamacy,0.4
+2022/09/01,Dental,5
+2022/12/01,Bread,13.4
+2022/12/01,Beef and Veal,8.8
+2022/12/01,Milk,18.1
+2022/12/01,Cheese,14
+2022/12/01,Ice Cream and Other Dairy,11.8
+2022/12/01,Eggs,11.6
+2022/12/01,Take Away and Meals Out,8
+2022/12/01,Alcohol and Tabacco,4.1
+2022/12/01,Rent,2.2
+2022/12/01,Electricity,5.2
+2022/12/01,Pharamacy,0.6
+2022/12/01,Dental,5.3
+2023/03/01,Bread,13.4
+2023/03/01,Beef and Veal,0.7
+2023/03/01,Milk,16.3
+2023/03/01,Cheese,16.8
+2023/03/01,Ice Cream and Other Dairy,11.6
+2023/03/01,Eggs,13.1
+2023/03/01,Take Away and Meals Out,7
+2023/03/01,Alcohol and Tabacco,4.3
+2023/03/01,Rent,3.1
+2023/03/01,Electricity,7.7
+2023/03/01,Pharamacy,0.2
+2023/03/01,Dental,4.1
+2023/06/01,Bread,14.4
+2023/06/01,Beef and Veal,-2
+2023/06/01,Milk,15.4
+2023/06/01,Cheese,16.2
+2023/06/01,Ice Cream and Other Dairy,14.1
+2023/06/01,Eggs,11.6
+2023/06/01,Take Away and Meals Out,7.3
+2023/06/01,Alcohol and Tabacco,4.9
+2023/06/01,Rent,5
+2023/06/01,Electricity,2.3
+2023/06/01,Pharamacy,0
+2023/06/01,Dental,3.2
+2023/09/01,Bread,12.8
+2023/09/01,Beef and Veal,-2.8
+2023/09/01,Milk,5.4
+2023/09/01,Cheese,15.7
+2023/09/01,Ice Cream and Other Dairy,11.2
+2023/09/01,Eggs,8
+2023/09/01,Take Away and Meals Out,6
+2023/09/01,Alcohol and Tabacco,4.9
+2023/09/01,Rent,5.8
+2023/09/01,Electricity,10.1
+2023/09/01,Pharamacy,2.2
+2023/09/01,Dental,3.2
+2023/12/01,Bread,9.7
+2023/12/01,Beef and Veal,-4.2
+2023/12/01,Milk,4.3
+2023/12/01,Cheese,8.4
+2023/12/01,Ice Cream and Other Dairy,7.6
+2023/12/01,Eggs,10.7
+2023/12/01,Take Away and Meals Out,5.5
+2023/12/01,Alcohol and Tabacco,7.1
+2023/12/01,Rent,6
+2023/12/01,Electricity,8.6
+2023/12/01,Pharamacy,0
+2023/12/01,Dental,3
+2024/03/01,Bread,8.2
+2024/03/01,Beef and Veal,-5.2
+2024/03/01,Milk,2.9
+2024/03/01,Cheese,5
+2024/03/01,Ice Cream and Other Dairy,5.5
+2024/03/01,Eggs,8.1
+2024/03/01,Take Away and Meals Out,5.8
+2024/03/01,Alcohol and Tabacco,6.4
+2024/03/01,Rent,6.8
+2024/03/01,Electricity,8.2
+2024/03/01,Pharamacy,2.9
+2024/03/01,Dental,4.1
+2024/06/01,Bread,2.9
+2024/06/01,Beef and Veal,-4
+2024/06/01,Milk,2.9
+2024/06/01,Cheese,2.9
+2024/06/01,Ice Cream and Other Dairy,1.7
+2024/06/01,Eggs,6.4
+2024/06/01,Take Away and Meals Out,5
+2024/06/01,Alcohol and Tabacco,6
+2024/06/01,Rent,6.6
+2024/06/01,Electricity,14.7
+2024/06/01,Pharamacy,3
+2024/06/01,Dental,4
+2024/09/01,Bread,1.4
+2024/09/01,Beef and Veal,-2.5
+2024/09/01,Milk,1.5
+2024/09/01,Cheese,-2
+2024/09/01,Ice Cream and Other Dairy,0.1
+2024/09/01,Eggs,9.9
+2024/09/01,Take Away and Meals Out,3.6
+2024/09/01,Alcohol and Tabacco,6.1
+2024/09/01,Rent,6.5
+2024/09/01,Electricity,-7
+2024/09/01,Pharamacy,3.5
+2024/09/01,Dental,4
+2024/12/01,Bread,2.5
+2024/12/01,Beef and Veal,-0.6
+2024/12/01,Milk,-1.3
+2024/12/01,Cheese,-1.7
+2024/12/01,Ice Cream and Other Dairy,-1.2
+2024/12/01,Eggs,12.4
+2024/12/01,Take Away and Meals Out,2.7
+2024/12/01,Alcohol and Tabacco,5.8
+2024/12/01,Rent,6.4
+2024/12/01,Electricity,-25
+2024/12/01,Pharamacy,3.4
+2024/12/01,Dental,3.9

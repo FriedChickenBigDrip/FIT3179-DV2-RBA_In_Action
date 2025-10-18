@@ -11,19 +11,30 @@
     "encoding": {
       "x": {
         "timeUnit": "yearmonth", "field": "Date",
-        "axis": {"domain": false, "format": "%Y", "tickSize": 0}
+        "axis": {"domain": false, "format": "%Y", "tickSize": 0},
+        "title": "Date"
       },
       "y": {
         "aggregate": "sum", "field": "Value",
-        "stack": "center", "axis": null
+        "stack": "center", "axis": {"labels": false, "ticks": false, "domain": false, "grid": false},
+        "title": "Total Value of Banknotes ($millions)"
       },
       "color": {
         "field":"Attribute",
-        "scale": {"scheme": "category20b"}
+        "scale": {
+            "domain": ["$5 notes", "$10 notes", "$20 notes", "$50 notes", "$100 notes"],
+            "range": ["#E91E63", "#2196F3", "#FF5722", "#FFC107", "#4CAF50"]
+      },
+        "title": "Banknote Denomination"
       },
       "opacity": {
         "condition": {"param": "BankNotes", "value": 1},
         "value": 0.2
-      }
+      },
+      "tooltip": [	
+        {"field": "Date", "type": "temporal", "title": "Quarterly Observations"},
+        {"field": "Value", "type": "quantitative", "title": "Total Value of Banknotes ($millions)", "format": ",.0f"},
+        {"field": "Attribute", "type": "nominal", "title": "Banknote Denomination"}
+      ]
     }
   }

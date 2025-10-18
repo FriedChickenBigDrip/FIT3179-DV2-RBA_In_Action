@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "data/CPI.csv"
+    },
+    "width": "container",
+    "height": 400,
+    "title": "CPI (Consumer Price Index) in Australia",
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 13
+        },
+        "axis": {
+            "domain": false
+        }
+    },
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "Series_ID",
+            "type": "temporal",
+            "timeUnit": "yearquarter",
+            "title": "Quarterly Observation",
+            "axis": {
+                "labelAngle": 0
+            }
+        },
+        "y": {  
+            "field": "Attribute",
+            "type": "ordinal",
+            "title": "CPI Category"
+        },
+        "color": {
+            "field": "Value",
+            "scale": {"scheme": "redyellowgreen"},
+            "aggregate": "mean",
+            "type": "quantitative",
+            "legend": {
+                "title": null
+            }
+        }
+    }
+  }

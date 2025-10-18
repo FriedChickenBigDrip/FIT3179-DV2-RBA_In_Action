@@ -1,5 +1,6 @@
 body *{
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 h1 {
@@ -23,6 +24,21 @@ body {
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
+}
+
+.highlight-Cash-Rate {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.highlight-Exchange-Settlement-Rate {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.highlight-Overnight-Repo-Rate {
+    color: #2ecc71;
+    font-weight: bold;
 }
 
 .page {
