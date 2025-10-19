@@ -1,8 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 400,
-  "title": "Unemployment Rate (%) by Region",
+  "height": 700,
+    "title": {
+      "text": "Unemployment Rate (%) by Region in Australia",
+      "fontSize": 35,
+      "subtitle": "Use the controls to filter the data",
+      "subtitleFontStyle": "italic",
+      "subtitleColor": "gray",
+      "subtitleFontSize": 20
+  },
   "params": [
     {
       "name": "Year_selection",
@@ -28,15 +35,16 @@
     },
     {
       "name": "Gender_selection",
+      "value": "Males",
       "bind": {
         "input": "select",
         "options": [
-          null,
+
           "Males",
           "Females"
         ],
         "labels": [
-          "Show All",
+
           "Males",
           "Females"
         ],
@@ -45,10 +53,11 @@
     },
     {
       "name": "Age_selection",
+      "value": "15-24 years",
       "bind": {
         "input": "select",
         "options": [
-          null,
+
           "15-24 years",
           "25-34 years",
           "35-44 years",
@@ -57,7 +66,7 @@
           "65 years and over"
         ],
         "labels": [
-          "Show All",
+
           "15-24 years",
           "25-34 years",
           "35-44 years",
@@ -72,7 +81,7 @@
   "projection": {
     "type": "mercator",
     "center": [133, -27],
-    "scale": 550
+    "scale": 850
   },
   "layer": [
     {

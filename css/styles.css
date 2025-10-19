@@ -3,23 +3,27 @@ body *{
     font-weight: 300;
 }
 
+b, strong {
+    font-weight: 600;
+}
+
 h1 {
     font-family: 'Castoro Titling', serif; 
-    font-size: 60px;
+    font-size: 95px;
     text-align: center; 
     font-weight: 900;
 }
 
 h2 {
     font-family: 'Oranienbaum', serif; 
-    font-size: 40px;
+    font-size: 65px;
     text-align: center; 
     font-weight: 900;
 }
 
 body {
     background-color: lightgray;
-    font-size: 25px;
+    font-size: 35px;
     background-image: url('depositphotos_107768184-stock-photo-business-financial-newspaper-forecast-detail.jpg');
     background-repeat: repeat;
     background-position: center;
@@ -42,15 +46,16 @@ body {
 }
 
 .page {
-    width: 850px;
+    width: 1100px;
     background-color: whitesmoke;
     margin: auto;
-    padding: 25px; /* padding between the page and the content */
+    padding: 35px; /* padding between the page and the content */
     padding-top: 35px;
 }
 
 .vis-container {
     width: 100%;
+    padding: 10px; /* padding between the page and the content */
 }
 
 .description h2,
@@ -68,9 +73,17 @@ h1 {
 
 .pure-g {
     margin-bottom: 40px;
-    padding: 15px; /* padding between the content and the grid group */
+    padding: 35px; /* padding between the content and the grid group */
     border-radius: 10px; /* rounded corners for the grid group */
     background-color: white;    
+}
+
+.pure-g-end {
+    margin-bottom: 40px;
+    padding: 15px; /* padding between the content and the grid group */
+    border-radius: 10px; /* rounded corners for the grid group */
+    background-color: white;
+    text-align: center;
 }
 
 .small-font {

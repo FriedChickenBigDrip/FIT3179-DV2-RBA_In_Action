@@ -4,9 +4,17 @@
     "height": 400,
     "description": "Monetary Policy Rates over Time.",
     
-
+    "title": {
+        "text": "Monetary Policy Rates over Time",
+        "fontSize": 35,
+        "subtitle": "A view of the RBA's Interest Rate Corridor",
+        "subtitleFontStyle": "italic",
+        "subtitleColor": "gray",
+        "subtitleFontSize": 20
+    },
 
     "data": {"url": "data/MonetaryPolicyRates.csv"},
+
     "transform": [
     {
         "calculate": "datum.Attribute == 'Cash_Rate_Target' ? 'Cash Rate Target' : datum.Attribute == 'Exchange_Settlement_Rate' ? 'Exchange Settlement Rate' : 'Overnight Repo Rate'",
@@ -20,16 +28,24 @@
         "point": true
     },
     "encoding": {
-        "x": {"field": "Date", "type": "temporal", "title": "Quarterly Observations"},
-        "y": {"field": "Value", "type": "quantitative","scale": {"domain": [0, 9]}, "title": "Monetary Policy Rate (%)"},
+        "x": {"field": "Date", "type": "temporal", "title": "Date", "fontSize": 15},
+        "y": {"field": "Value", "type": "quantitative","scale": {"domain": [0, 9]}, "title": "Monetary Policy Rate (%)", "fontSize": 15},
         "color": {"field": "Attribute_Clean", "type": "nominal", "title": "Monetary Policy Rate Type", 
             "scale": {
                 "domain": ["Cash Rate Target", "Exchange Settlement Rate", "Overnight Repo Rate"],
                 "range": ["#e74c3c", "#3498db", "#2ecc71"]
-            }	
+            },
+            "legend": {
+                "title": "Rate/Ratio Value (%)",
+                "orient": "bottom",
+                "direction": "horizontal",
+                "titleAnchor": "middle",
+                "anchor": "middle",
+                "fontSize": 15
+              }	
     },
         "tooltip": [	
-            {"field": "Date", "type": "temporal", "title": "Quarterly Observations"},
+            {"field": "Date", "type": "temporal", "title": "Date"},
             {"field": "Value", "type": "quantitative", "title": "Monetary Policy Rate (%)"},
             {"field": "Attribute_Clean", "type": "nominal", "title": "Monetary Policy Rate Type"}
         ]
@@ -38,8 +54,10 @@
 {
     "data": {
         "values": [
-            {"event": "2008/09/01", "label": "GFC Crisis"},
-            {"event": "2021/02/01", "label": "Post COVID-19 Inflation"}
+            {"event": "2008/01/01", "label": "GFC"},
+            {"event": "2009/10/09", "label": ""},
+            {"event": "2020/02/01", "label": "COVID"},
+            {"event": "2022/05/04", "label": ""}
         ]
     },
     "layer": [

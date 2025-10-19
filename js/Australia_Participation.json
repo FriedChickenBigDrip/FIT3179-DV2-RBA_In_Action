@@ -1,5 +1,16 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"title": {
+    "text": "Labour Market Indicators by Region in Australia",
+    "fontSize": 35,
+    "subtitle": "Use the controls to filter the data",
+    "subtitleFontStyle": "italic",
+    "subtitleColor": "gray",
+    "subtitleFontSize": 20,
+    "anchor": "middle",
+    "fontWeight": "bold",
+    "offset": 20
+},
   "params": [
     {
       "name": "Year_selection",
@@ -25,15 +36,16 @@
     },
     {
       "name": "Gender_selection",
+      "value": "Males",
       "bind": {
         "input": "select",
         "options": [
-          null,
+
           "Males",
           "Females"
         ],
         "labels": [
-          "Show All",
+
           "Males",
           "Females"
         ],
@@ -42,10 +54,11 @@
     },
     {
       "name": "Age_selection",
+      "value": "15-24 years",
       "bind": {
         "input": "select",
         "options": [
-          null,
+
           "15-24 years",
           "25-34 years",
           "35-44 years",
@@ -54,7 +67,7 @@
           "65 years and over"
         ],
         "labels": [
-          "Show All",
+
           "15-24 years",
           "25-34 years",
           "35-44 years",
@@ -68,12 +81,15 @@
   ],
   "hconcat": [
     {
-      "width": 400,
-      "height": 400,
-      "title": "Labour Force Participation Rate (%) by Region",
+      "width":490,
+      "height": 700,
+        "title": {
+          "text": "Labour Force Participation Rate (%) by Region",
+          "fontSize": 15
+        },
       "projection": {
         "type": "mercator",
-        "center": [112.5, -27],
+        "center": [108.5, -27],
         "scale": 550
       },
       "layer": [
@@ -165,12 +181,15 @@
       ]
     },
     {
-      "width": 400,
-      "height": 400,
-      "title": "Employment to Population Ratio (%) by Region",
+      "width": 490,
+      "height": 700,
+      "title": {
+        "text": "Employment to Population Ratio (%) by Region",
+        "fontSize": 15
+      },
       "projection": {
         "type": "mercator",
-        "center": [112.5, -27],
+        "center": [108.5, -27],
         "scale": 550
       },
       "layer": [

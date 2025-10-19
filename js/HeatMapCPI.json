@@ -5,7 +5,11 @@
     },
     "width": "container",
     "height": 400,
-    "title": "Quarter on Quarter % Change in CPI",
+"title": {
+    "text": "Victorian Quarter-on-Quarter Change % in CPI",
+    "fontSize": 40,
+    "offset": 25
+},
     "config": {
         "view": {
             "strokeWidth": 0,
@@ -27,12 +31,14 @@
             "title": "Quarterly Observation",
             "axis": {
                 "labelAngle": 0
-            }
+            },
+            "fontSize": 15
         },
         "y": {  
             "field": "Attribute",
             "type": "ordinal",
-            "title": "CPI Category"
+            "title": "CPI Category",
+            "fontSize": 15
         },
         "color": {
             "field": "Value",
@@ -40,15 +46,17 @@
             "aggregate": "mean",
             "type": "quantitative",
             "legend": {
-                "title": "CPI % Change",
+                "title": "CPI Change (%)",
                 "direction": "horizontal",
-                "titleAnchor": "middle"
+                "titleAnchor": "middle",
+                "anchor": "middle",
+                "fontSize": 15
             }
         },
         "tooltip": [
-            {"field": "Series_ID", "type": "temporal", "title": "Quarterly Observations"},
+            {"field": "Series_ID", "type": "temporal", "title": "Quarterly Observation"},
             {"field": "Attribute", "type": "nominal", "title": "CPI Category"},
-            {"field": "Value", "type": "quantitative", "title": "CPI % Change", "format": ".2f"}
+            {"field": "Value", "type": "quantitative", "title": "CPI Change (%)", "format": ".2f"}
         ]
     }
 
@@ -61,9 +69,10 @@
             "dx": 5,
             "dy": -5,
             "fontSize": 12
+
         },
         "encoding": {
-            "x": {"datum": {"year": 2016, "month": 11, "day": 1}},
+            "x": {"datum": {"year": 2017, "month": 3, "day": 1}},
             "y": {"datum": "Electricity"},
             "text": {"value": "Impact of Heatwave"}
         }
@@ -78,7 +87,7 @@
             "fontSize": 12
         },
         "encoding": {
-            "x": {"datum": {"year": 2022, "month": 8, "day": 1}},
+            "x": {"datum": {"year": 2023, "month": 1, "day": 1}},
             "y": {"datum": "Beef and Veal"},
             "text": {"value": "Surplus Cattle Supply"}
         }
