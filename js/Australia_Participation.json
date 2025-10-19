@@ -1,0 +1,266 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2023,
+      "bind": {
+        "input": "range",
+        "min": 2012,
+        "max": 2024,
+        "step": 1,
+        "name": "Year:  "
+      }
+    },
+    {
+      "name": "Month_selection",
+      "value": 8,
+      "bind": {
+        "input": "range",
+        "min": 1,
+        "max": 11,
+        "step": 1,
+        "name": "Month:  "
+      }
+    },
+    {
+      "name": "Gender_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Males",
+          "Females"
+        ],
+        "labels": [
+          "Show All",
+          "Males",
+          "Females"
+        ],
+        "name": "Sex: "
+      }
+    },
+    {
+      "name": "Age_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "15-24 years",
+          "25-34 years",
+          "35-44 years",
+          "45-54 years",
+          "55-64 years",
+          "65 years and over"
+        ],
+        "labels": [
+          "Show All",
+          "15-24 years",
+          "25-34 years",
+          "35-44 years",
+          "45-54 years",
+          "55-64 years",
+          "65 years and over"
+        ],
+        "name": "Age Group: "
+      }
+    }
+  ],
+  "hconcat": [
+    {
+      "width": 400,
+      "height": 400,
+      "title": "Labour Force Participation Rate (%) by Region",
+      "projection": {
+        "type": "mercator",
+        "center": [112.5, -27],
+        "scale": 550
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "js/SA4_2021_AUST_GDA2020.json",
+            "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+          },
+          "transform": [
+            {
+              "calculate": "'Data is not available in ' + datum.properties.SA4_NAME21",
+              "as": "note"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "#ddd",
+            "stroke": "white",
+            "strokeWidth": 1
+          },
+          "encoding": {"tooltip": {"field": "note"}}
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+            "format": {"type": "topojson", "feature": "oceans"}
+          },
+          "mark": {"type": "geoshape", "fill": "skyblue"}
+        },
+        {
+          "data": {
+            "url": "data/participation.csv"
+          },
+          "transform": [
+            {
+              "calculate": "year(datum.Month)",
+              "as": "Year"
+            },
+            {
+              "calculate": "month(datum.Month)",
+              "as": "MonthNum"
+            },
+            {
+              "lookup": "Labour market region (SA4): ASGS (2011)",
+              "from": {
+                "data": {
+                  "url": "js/SA4_2021_AUST_GDA2020.json",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "SA4_2021_AUST_GDA2020"
+                  }
+                },
+                "key": "properties.SA4_NAME21"
+              },
+              "as": "geo"
+            },
+            {"filter": "datum.MonthNum == Month_selection"},
+            {"filter": "datum.Year == Year_selection"},
+            {"filter": "Gender_selection == null || datum.Sex == Gender_selection"},
+            {"filter": "Age_selection == null || datum.Age == Age_selection"}
+          ],
+          "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "Sum of Participation rate (%)",
+              "type": "quantitative",
+"scale": {
+  "type": "threshold",
+  "domain": [11, 22, 33, 44, 55, 66, 77, 88],
+  "range": ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c","#00441b"]
+},
+              "legend": {
+                "title": "Rate/Ratio Value (%)",
+                "orient": "bottom",
+                "direction": "horizontal",
+                "titleAnchor": "middle"
+              }
+            },
+            "tooltip": [
+              {"field": "Labour market region (SA4): ASGS (2011)", "type": "nominal", "title": "Region"},
+              {"field": "Month", "type": "temporal", "title": "Date"},
+              {"field": "Age", "type": "nominal", "title": "Age Group"},
+              {"field": "Sex", "type": "nominal", "title": "Sex"},
+              {"field": "Sum of Participation rate (%)", "type": "quantitative", "title": "Participation Rate (%)", "format": ".2f"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": 400,
+      "height": 400,
+      "title": "Employment to Population Ratio (%) by Region",
+      "projection": {
+        "type": "mercator",
+        "center": [112.5, -27],
+        "scale": 550
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "js/SA4_2021_AUST_GDA2020.json",
+            "format": {"type": "topojson", "feature": "SA4_2021_AUST_GDA2020"}
+          },
+          "transform": [
+            {
+              "calculate": "'Data is not available in ' + datum.properties.SA4_NAME21",
+              "as": "note"
+            }
+          ],
+          "mark": {
+            "type": "geoshape",
+            "fill": "#ddd",
+            "stroke": "white",
+            "strokeWidth": 1
+          },
+          "encoding": {"tooltip": {"field": "note"}}
+        },
+        {
+          "data": {
+            "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+            "format": {"type": "topojson", "feature": "oceans"}
+          },
+          "mark": {"type": "geoshape", "fill": "skyblue"}
+        },
+        {
+          "data": {
+            "url": "data/employpopulationratio.csv"
+          },
+          "transform": [
+            {
+              "calculate": "year(datum.Month)",
+              "as": "Year"
+            },
+            {
+              "calculate": "month(datum.Month)",
+              "as": "MonthNum"
+            },
+            {
+              "lookup": "Labour market region (SA4): ASGS (2011)",
+              "from": {
+                "data": {
+                  "url": "js/SA4_2021_AUST_GDA2020.json",
+                  "format": {
+                    "type": "topojson",
+                    "feature": "SA4_2021_AUST_GDA2020"
+                  }
+                },
+                "key": "properties.SA4_NAME21"
+              },
+              "as": "geo"
+            },
+            {"filter": "datum.MonthNum == Month_selection"},
+            {"filter": "datum.Year == Year_selection"},
+            {"filter": "Gender_selection == null || datum.Sex == Gender_selection"},
+            {"filter": "Age_selection == null || datum.Age == Age_selection"}
+          ],
+          "mark": {"type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5},
+          "encoding": {
+            "shape": {"field": "geo", "type": "geojson"},
+            "color": {
+              "field": "Sum of Employment to population rate (%)",
+              "type": "quantitative",
+"scale": {
+  "type": "threshold",
+  "domain": [11, 22, 33, 44, 55, 66, 77, 88],
+  "range": ["#f7fbff", "#deebf7", "#c6dbef", "#9ecae1", "#6baed6", "#4292c6", "#2171b5", "#08519c","#08306b"]
+},
+              "legend": {
+                "title": "",
+                "orient": "bottom",
+                "direction": "horizontal",
+                "titleAnchor": "middle"
+              }
+            },
+            "tooltip": [
+              {"field": "Labour market region (SA4): ASGS (2011)", "type": "nominal", "title": "Region"},
+              {"field": "Month", "type": "temporal", "title": "Date"},
+              {"field": "Age", "type": "nominal", "title": "Age Group"},
+              {"field": "Sex", "type": "nominal", "title": "Sex"},
+              {"field": "Sum of Employment to population rate (%)", "type": "quantitative", "title": "Employment Ratio (%)", "format": ".2f"}
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}

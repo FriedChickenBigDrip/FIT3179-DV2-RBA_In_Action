@@ -43,9 +43,9 @@ body {
 
 .page {
     width: 850px;
-    background-color: #fcfcfc;
+    background-color: whitesmoke;
     margin: auto;
-    padding: 50px;
+    padding: 25px; /* padding between the page and the content */
     padding-top: 35px;
 }
 
@@ -68,6 +68,9 @@ h1 {
 
 .pure-g {
     margin-bottom: 40px;
+    padding: 15px; /* padding between the content and the grid group */
+    border-radius: 10px; /* rounded corners for the grid group */
+    background-color: white;    
 }
 
 .small-font {

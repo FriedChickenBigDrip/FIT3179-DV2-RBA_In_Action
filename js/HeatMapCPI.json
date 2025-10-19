@@ -5,7 +5,7 @@
     },
     "width": "container",
     "height": 400,
-    "title": "CPI (Consumer Price Index) in Australia",
+    "title": "Quarter on Quarter % Change in CPI",
     "config": {
         "view": {
             "strokeWidth": 0,
@@ -15,6 +15,9 @@
             "domain": false
         }
     },
+    
+    "layer": [
+        {
     "mark": "rect",
     "encoding": {
         "x": {
@@ -33,12 +36,52 @@
         },
         "color": {
             "field": "Value",
-            "scale": {"scheme": "redyellowgreen"},
+            "scale": {"scheme": "redyellowgreen", "domain": [-25, 25]},
             "aggregate": "mean",
             "type": "quantitative",
             "legend": {
-                "title": null
+                "title": "CPI % Change",
+                "direction": "horizontal",
+                "titleAnchor": "middle"
             }
+        },
+        "tooltip": [
+            {"field": "Series_ID", "type": "temporal", "title": "Quarterly Observations"},
+            {"field": "Attribute", "type": "nominal", "title": "CPI Category"},
+            {"field": "Value", "type": "quantitative", "title": "CPI % Change", "format": ".2f"}
+        ]
+    }
+
+    },
+    {
+        "data": {"values": [{}]},
+        "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 5,
+            "dy": -5,
+            "fontSize": 12
+        },
+        "encoding": {
+            "x": {"datum": {"year": 2016, "month": 11, "day": 1}},
+            "y": {"datum": "Electricity"},
+            "text": {"value": "Impact of Heatwave"}
+        }
+    },
+    {
+        "data": {"values": [{}]},
+        "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 5,
+            "dy": -5,
+            "fontSize": 12
+        },
+        "encoding": {
+            "x": {"datum": {"year": 2022, "month": 8, "day": 1}},
+            "y": {"datum": "Beef and Veal"},
+            "text": {"value": "Surplus Cattle Supply"}
         }
     }
+    ]
   }

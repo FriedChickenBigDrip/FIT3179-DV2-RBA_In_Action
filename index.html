@@ -31,7 +31,11 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h1>The Reserve Bank of Australia in Action</h1>
-        <p>Australia's economic rhythm is quietly shaped by the Reserve Bank of Australia (RBA). Through monetary policy, the Bank sets the tone for interest rates, manages liquidity, and steers inflation toward stability. Each adjustment to the cash rate or shift in its balance sheet reflects a broader balancing act - keeping prices steady, supporting jobs, and navigating the ripple effects of global markets. This visualization explores how those levers work in practice and the forces that guide them.</p>
+        <p>Australia's economic rhythm is quietly shaped by the Reserve Bank of Australia (RBA). 
+          Through monetary policy, the Bank sets the tone for interest rates, manages liquidity, and steers inflation toward stability. 
+          Each adjustment to the cash rate or shift in its balance sheet reflects a broader balancing act - 
+          keeping prices steady, supporting jobs, and navigating the ripple effects of global markets. 
+          This visualization explores how those levers work in practice and the forces that guide them.</p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -39,7 +43,7 @@
     <!-- pure grid group // Heading and Introduction to Monetary Policy -->
     <div class="pure-g">
       <div class="pure-u-5-5">
-        <h2>Monetary Policy: Interest Rate Corridor</h2>
+        <h2>RBA Lever: Interest Rate Corridor</h2>
         <div id="vis1" class="vis-container"></div>
         <p>The interest rate corridor is the RBA's main framework for guiding short-term interest rates. 
           At its centre sits the <span class="highlight-Cash-Rate">cash rate target</span> - the rate the RBA wants banks to lend to each other overnight. 
@@ -52,7 +56,7 @@
 
     <div class="pure-g">
       <div class="pure-u-5-5">
-        <h2>Monetary Policy: Banknotes in Circulation</h2>
+        <h2>RBA Lever: Banknotes in Circulation</h2>
         <div id="vis2" class="vis-container"></div>
         <p>The total value of banknotes in circulation shows how much physical cash Australians are holding at any point in time. 
           When people or businesses need more cash-like during periods of strong spending or uncertainty - the RBA increases supply through the banking system. 
@@ -66,14 +70,19 @@
     <div class="pure-g">
       <div class="pure-u-5-5">
 
-          <h2>The Influence of Unemployment</h2>
-          <div id="vis3" class="vis-container"></div>
+          <h2>The Guiding Force of Unemployment</h2>
           <p>Unemployment is one of the key signals the RBA watches when setting monetary policy. 
             High joblessness means spare capacity in the economy - people want to work, 
             but demand is too weak - so the RBA tends to lower interest rates to encourage spending and hiring. 
             When unemployment falls and labour markets tighten, wage and price pressures rise, prompting the Bank to raise rates to keep inflation in check. 
             Mapping unemployment across regions, age groups, and genders reveals where the economy's strengths and stresses lie - insights that 
             help shape how the RBA's policy supports a more balanced recovery.</p>
+          <div id="vis3" class="vis-container"></div>
+          <p>While unemployment is a key guide for the RBA, it only tells part of the story. 
+            The participation rate shows how many people are actively in the workforce, and the employment-to-population ratio reveals how many are
+             actually employed relative to the total population. Together, these measures help the Bank see whether low unemployment reflects 
+             real economic strength or simply fewer people looking for work, giving a more complete picture of labour market health.</p>
+          <div id="vis5" class="vis-container"></div>
 
       </div>
     </div>
@@ -83,21 +92,29 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <div class="description">
-          <h2>The Influence of Inflation</h2>
-          <p>The inflation rate is the rate at which the price of goods and services is increasing. The inflation rate is measured by the Consumer Price Index (CPI). The CPI is a measure of the price of a basket of goods and services that are representative of the typical Australian household. The inflation rate is measured by the Consumer Price Index (CPI). The CPI is a measure of the price of a basket of goods and services that are representative of the typical Australian household.</p>
+          <h2>The Guiding Force of Inflation</h2>
+          <p>The inflation rate is the rate at which the price of goods and services is increasing. 
+            The inflation rate is measured by the Consumer Price Index (CPI). 
+            The CPI is a measure of the price of a basket of goods and services that are 
+            representative of the typical Australian household. The inflation rate is measured by the Consumer 
+            Price Index (CPI). The CPI is a measure of the price of a basket of goods and services that are 
+            representative of the typical Australian household.</p>
+          <p>In the below chart, you can observe a randomly selected sub-set of the basket of goods in the Victorian CPI from 2014 to 2024.
+          </p>
             <div id="vis4" class="vis-container"></div>
+          <p>Extreme events can cause sharp swings in individual CPI categories. 
+            In 2018, a severe Victorian heatwave drove electricity prices sharply higher as demand surged, 
+            while in 2023 a surplus in cattle supply pushed beef prices lower. 
+            These examples show how temporary shocks can distort price movements in specific sectors. 
+            For this reason, the RBA looks beyond short-term volatility and focuses on a balanced view of 
+            inflation, assessing the broader CPI to understand underlying price pressures and set monetary 
+            policy that supports stable, sustainable growth.</p>
         </div>
       </div>
     </div>
     <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div id="vis3" class="vis-container"></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
+
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -111,7 +128,9 @@
   <script type="text/javascript">
     var specVis1 = "js/MPRates.json";
     var specVis2 = "js/BankNotes.json";
-    var specVis3 = "js/Australia_Labour_High_Level.json";
+    var specVis3 = "js/Australia_Unemployment.json";
+    var specVis5 = "js/Australia_Participation.json";
+    var specVis6 = "js/Australia_EmpToPop.json";
     var specVis4 = "js/HeatMapCPI.json";
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
@@ -125,6 +144,14 @@
     }).catch(console.error);
 
     vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
